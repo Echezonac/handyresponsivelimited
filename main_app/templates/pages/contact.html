@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+<!-- contact start -->
+<section class="row pt-5 pb-5" id="contact-page">
+  <div class="col-10 mx-auto pt-5">
+    <!-- inner row start-->
+    <div class="row d-flex align-items-center">
+      <!-- item -->
+      <!-- address -->
+      <div class="col-lg-4 col-md-12 col-sm-12 address-box d-flex justify-content-center align-items-center">
+        <ul class="my-auto mx-auto p-3" style="width: fit-content;height: fit-content;">
+           <li>
+          <a href="#">
+            {% for item in addresses %}
+            <p class="text-light"><i class="fa fa-map-marker text-light" aria-hidden="true"></i><span class="mx-2 text-light">{{item.street}}, </span><span class="text-light">{{item.city}}, </span><span class="text-light">{{item.state}}, </span>{{item.country}}.
+            </p>
+            {% endfor %}
+          </a>
+          </li>
+          <!-- contact start -->
+          {% for contact in contacts %}
+          <li><p><a href="mailto:{{contact.gmail}}"><i class="fa fa-envelope-o text-light" aria-hidden="true"></i> <span class="mx-2 text-light">{{contact.gmail}}</span></p></a></li>
+          <li><p><a href="tel:{{contact.phone1}}"><i class="fa fa-phone text-light" aria-hidden="true"></i><span class="mx-2 text-light">{{contact.phone1}}</span></p></a></li>
+          <li><p><a href="tel:{{contact.phone2}}"><i class="fa fa-phone text-light" aria-hidden="true"></i><span class="mx-2 text-light">{{contact.phone2}}</span></p></a></li>
+          {% endfor %}
+          <!-- contact end -->
+         {% for i in icons %}
+         <li class="socials">
+          <!-- facebook -->
+          <a href="{{i.facebook}}" target="_blank">
+            <i class="fa fa-facebook-official mx-3" aria-hidden="true"></i>
+          </a>
+          <!-- instagram -->
+          <a href="{{i.instagram}}" target="_blank">
+            <i class="fa fa-instagram mx-3" aria-hidden="true"></i>
+          </a>
+          <!-- twiter -->
+          <a href="{{i.twitter}}" target="_blank">
+            <i class="fa fa-twitter-square mx-3" aria-hidden="true"></i>
+          </a>
+          <!-- whatsapp -->
+          <a href="{{i.whatsapp}}" target="_blank">
+            <i class="fa fa-whatsapp mx-3" aria-hidden="true"></i>
+          </a>
+        </li>
+         {% endfor %}
+        </ul>
+      </div>
+      <!-- item -->
+      <!-- contact form -->
+      <div class="col-lg-4 col-md-12 col-sm-12 form-box ">
+        <div class="container">
+          {% if submitted %}
+          <div class="row">
+            <div class="col-12">
+              <h3 class="text-center">Message submitted successfully !!</h3>
+            </div>
+            <div class="col-12">
+              <p class="text-center">we will get back to you shortly</p>
+            </div>
+          </div>
+          
+          {% else %}
+          <form action="{% url 'contact_page' %}" method="POST" class="pt-3">
+            {% csrf_token %}
+            <div class="field" tabindex="1">
+              <label for="id_message_name">
+                <i class="fa fa-user"></i>Your FullName
+              </label>
+              <input name="message_name" type="text" placeholder="e.g. Hampo Eche" required>
+            </div>
+            <div class="field" tabindex="2">
+              <label for="id_message_email">
+                <i class="fa fa-envelope"></i>Your Email 
+              </label>
+              <input name="message_email" type="email" placeholder="hampoherobede@gmail.com" required>
+            </div>
+            <div class="field" tabindex="3">
+              <label for="id_phoneNumber">
+                <i class="fa fa-envelope"></i>Your Phone Number
+              </label>
+              <input name="phoneNumber"  type="text" placeholder="+2347065896334" required>
+            </div>
+            <div class="field" tabindex="4">
+              <label for="id_message_content">
+                <i class="fa fa-edit"></i>Your Message
+              </label>
+              <textarea name="message_content" placeholder="type here"  required></textarea>
+            </div>
+            <button type="submit">Send Me Message</button>
+          </form>
+          {% endif %}
+        </div>
+      </div>
+      <!-- item -->
+      {% for map in maps %}
+      <div class="col-lg-4 col-md-12 col-sm-12  address-box p-1">
+          <iframe src="{{map.googleMap}}"  style="border:0; width: 100%; height: 100%;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      {% endfor %}
+    </div>
+    <!-- inner row end -->
+  </div>
+</section>
+<!-- contact end -->
+{% endblock %}

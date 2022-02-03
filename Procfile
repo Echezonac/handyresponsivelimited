@@ -1,0 +1,1 @@
+web: gunicorn HRL.wsgi:application --log-file -

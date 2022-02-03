@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home Responsive Limited {{service.caption}} Service | homeresponsivelimited.com Nigeria{% endblock %}
+{% block description %}{{service.description}}{% endblock %}
+{% block keywords %}House Cleaning, Dish Washing, Laundry, Cooking, Chef, Gardener, Nanny, Maid, After-Party cleanup, New House cleaning, Car Washing, House, Car, Vehincle, Help, Baby, House Maid,Nigeria, Africa, Jobs,Money,Employement,Lagos{% endblock %}
+{% block main %}
+
+
+<!-- Detail Service Start -->
+<section class="row mt-4" id="about-page" style="height: 80vh;">
+  <!-- about box start -->
+  <div class=" about-box col-lg-12 px-lg-5 col-sm-12 mb-4 mx-auto" style="height:fit-content;" data-aos="zoom-in">
+   <div class="row d-flex align-items-center" style="height: fit-content;">
+     <div class="col-lg-6 col-sm-12">
+      <h3 class="text-center heading p-2">{{service.caption}}</h3>
+      <div class="underline text-center mx-auto"></div>
+      <p class="px-2">
+      {{service.description}}
+      </p>
+      <a href="{% url 'home_page' %}#booking" class="btn btnx d-block mx-auto mb-5" style="width: fit-content;">
+        BOOK NOW</a>
+     </div>
+     <div class="col-lg-6 col-sm-12 d-flex align-items-center">
+      <div class="about-img-box mx-auto ">
+        <img src="/media/{{service.banner}}" class="rounded mx-auto d-block" width="300px" alt="Handy_response_Limited_About_Page_Image">
+      </div>
+     </div>
+   </div>
+  </div>
+  <!-- about box end -->
+  <!-- about picture -->
+</section>
+<!-- detail Service End -->
+{% endblock %}

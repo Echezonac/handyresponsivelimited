@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Home Responsive Limited-A global service-oreinted company that provides various types of household chores services| homeresponsivelimited.com Nigeria{% endblock %}
+{% block description %}Handy Response Limited is a global service-oriented company that provides various types of 'household chores related services', a helping hand to those who are seeking domestic staff who can assist them in managing their household. The company offers its services to everyone ranging from young professionals, the elderly, busy working mums, disabled people, companies/offices, party planners and people moving into new houses. We pride ourselves in building a reputation that substantially outstrips our competitors with a vision to position ourselves as the top-class service provider to households in Nigeria.{% endblock %}
+{% block keywords %}House Cleaning, Dish Washing, Laundry, Cooking, Chef, Gardener, Nanny, Maid, After-Party cleanup, New House cleaning, Car Washing, House, Car, Vehincle, Help, Baby, House Maid,Nigeria, Africa, Jobs,Money,Employement,Lagos{% endblock %}
+{% block main %}
+<!-- Styling start-->
+<style>
+  .core-values-banner{
+    background-image: url('{% static "images/core-bg01.png" %}') !important;
+    /* background-image: url('/media/{{about.banner}}'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+  }
+</style>
+<!-- Styling end -->
+<!-- introduction start -->
+<section class="row" id="more-page">
+  <!-- intro -->
+  <div class="col-12 about-banner">
+    <div class="p-2" style="background-color:rgba(0,0,0,0.4); height:100%;width:100%;border: 2px solid white;">
+      <h2 class="heading text-center text-light">
+        Handy Response Limited
+      </h2>
+      <h4 class="text-center text-light fw-bold">
+        A DOMESTIC & INDUSTRIAL CLEANING SERVICES COMPANY
+      </h4>
+      <P class="text-light">
+        Handy Response Limited is a global service-oriented company that provides various types of 'household chores related services', a helpinghand to those who are seeking domestic staff who can assist them in managing their household. The company offers its services to everyone ranging from young professionals, the elderly, busy working mums, disabled people, companies/offices, party planners and people moving into new houses. We pride ourselves in building a reputation that substantially outstrips our competitors with a vision to position ourselves as the top-class service provider to households in Nigeria.
+      </P>
+    </div>
+  </div>
+  <!-- intro end -->
+  <!-- what we believe -->
+  <!-- vision -->
+  <div class="col-lg-6 col-md-12 col-sm-12 pt-5 d-flex align-items-center px-4">
+    <div class="card mb-3 mx-auto" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4 d-flex align-items-center">
+          <img src="{% static 'images/vision.png' %}" class="img-fluid d-block rounded-start" alt="...">
+        </div>
+        <div class="col-md-8 d-flex align-items-center" style="height: 260px;">
+          <div class="card-body">
+            <h5 class="card-title">
+              To become a top-class service provider to households in Africa<br>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- vision end -->
+    <!-- mission start -->
+    <div class="col-lg-6 col-md-12 col-sm-12 pt-5 d-flex align-items-center px-4">
+      <div class="card mb-3 mx-auto" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4 d-flex align-items-center">
+            <img src="{% static 'images/mission.png' %}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8" style="height: 260px;">
+            <div class="card-body">
+              <h5 class="card-title">
+                Provide Excellent professional services and improve its position as a leader in this field.<br>
+                Build and maintain a team Motivated and Committed workforce with high work ethos<br>
+                Use Client Satisfaction and act as an effective catalyst for making lives of people
+                easier and comfortable<br>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- mission end --> 
+</section>
+<!-- introduction end -->
+<!-- Core values start -->
+<section class="row pt-5 pb-5" id="core-values-page">
+  <!-- description start -->
+  <div class="col-12">
+     <!-- title start -->
+  <div class="col-12 core-values-banner d-flex align-items-center justify-content-center">
+    <span>
+     <h3 class="text-center heading p-2">OUR CORE VALUES</h3>
+     <div class="underline text-center mx-auto"></div>
+     <h5 class="text-center py-2">
+      Our core values guide the way we think, act and interpret things.
+      Handy Response core values are summed in the acronym 'GRACE',
+      which stands for: Genuine, Responsibility, Accountability, Commitment
+      and Excellence.
+      
+     </h5>
+    </span>
+  </div>
+  <!-- title end -->
+<div class="col-12 py-2" style="height:fit-content;">
+      
+   <!-- Accordion start -->    
+   <div class="accordion mx-auto">
+    <div class="accordion-item">
+      <button class="accordion-item__button">Genuine</button>
+      <div class="accordion-item__content">
+        <p>
+          Genuine because we genuinely enjoy helping one another succeed.
+        </p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-item__button">Responsibility</button>
+      <div class="accordion-item__content">
+        <p>
+          is knowing that no matter how bad things appear, there is always a possibility to express truth in the face of a challenge. Response-ability is the source of power and integrity, the power to influence situation and the integrity to do so in alignment with our values.
+        </p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-item__button">Accountability</button>
+      <div class="accordion-item__content">
+        <p>
+          At the core of accountability is reliability and personal responsibility. We value the ability of our staff and organization to honour our commitments, to clients and to each other. We take ownership of our work and promptly correct mistakes to the greatest extent possible.
+        </p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-item__button">Commitment</button>
+      <div class="accordion-item__content">
+        <p>
+          we are dedicated to the success of our customers, partners, employees and shareholders.
+        </p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-item__button">Excellence</button>
+      <div class="accordion-item__content">
+        <p>
+          is the possession of a good quality to an unusual degree. It entails continuous improvement in all areas of our service delivery and  a consistent result at the required speed and volume.
+        </p>
+      </div>
+    </div>
+   </div>
+   <!-- Accordion end -->
+    </div>
+  </div>
+  <!-- description end -->
+</section>
+<!-- Core values end -->
+{% endblock %}

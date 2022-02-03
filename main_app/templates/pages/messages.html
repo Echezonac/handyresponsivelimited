@@ -1,0 +1,36 @@
+{% extends 'admin.html' %}
+{% load static %}
+{% block main %}
+
+<!-- Message table start -->
+<section class="row my-2">
+    <div class="container" id="no-more-tables">
+        <p>&nbsp;</p>
+        <table class="table table-hover">
+          <thead>
+            <tr class="active">
+              <th class="col-xs-1"><strong>S/no</strong></th>
+              <th class="col-xs-2"><strong>FullName</strong></th>
+              <th class="col-xs-3"><strong>Email</strong></th>
+              <th class="col-xs-1"><strong>phoneNumber</strong></th>
+              <th class="col-xs-4"><strong>Message</strong></th>
+              <th class="col-xs-1"><strong>Date</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for message in message_lists  %}
+            <tr role="button" data-toggle="collapse" href="#demo1" aria-expanded="false" aria-controls="demo1">
+              <td data-title="S/no">{{message.id}}</td>
+              <td data-title="FullName">{{message.message_name}}</td>
+              <td data-title="Email">{{message.message_email}}</td>
+              <td data-title="Phone">{{message.phoneNumber}}</td>
+              <td data-title="Message">{{message.message_content}}</td>
+              <td data-title="Date">{{message.message_date}}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+</section>
+<!-- Message table end -->
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{news.topic}} |Home Responsive Limited | homeresponsivelimited.com Nigeria{% endblock %}
+{% block description %}{{news.content}}{% endblock %}
+{% block keywords -House Cleaning, Dish Washing, Laundry, Cooking, Chef, Gardener, Nanny, Maid, After-Party cleanup, New House cleaning, Car Washing, House, Car, Vehincle, Help, Baby, House Maid,Nigeria, Africa, Jobs,Money,Employement,Lagos{% endblock %}
+{% block main %}
+<style>
+  img {
+      float: left !important; 
+      margin: 5px !important;
+  }
+  p {
+      text-align: justify !important;
+      /* font-size: 25px !important; */
+  }
+</style>
+<!-- Detail blog Start -->
+<section class="row py-3 px-3" id="news-detail" >
+  <div class="col-12 py-3 px-3">
+    <h3 class="text-center"><b>{{news.topic}}</b></h3>
+    <div class="square">
+        <div class=""> 
+            <img src="/media/{{news.pic}}" class="img-fluid" alt="{{news.topic}}"> 
+        </div>    
+    <p class="card-text p-4">{{news.content}}</p>
+    <p class="card-text"><small class="text-muted">posted on {{news.post_date}}</small></p>
+  </div>
+</section>   
+<!-- Detail blog end -->
+{% endblock %}
+
