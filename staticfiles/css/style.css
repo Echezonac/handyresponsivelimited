@@ -204,18 +204,8 @@ header{
 /* Highlights styling */
 #highlights-page{
   height: 400px;
-  /* background-image: url('{% static "images/bg05.png" %}'); */
  }
-#highlight-pic{
-  background-image: url('{% static "images/bg02.png" %}');
-  height: fit-content;
-  padding: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  z-index: -1500;
-  background-attachment: fixed !important;
-}
+
 /* Why us styling */
 #whyus-page{
   padding-top: 8em !important;
