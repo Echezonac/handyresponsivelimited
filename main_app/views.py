@@ -6,10 +6,6 @@ from .models import *
 from .forms import *
 # Create your views here.
 def home(request):
-  news_list = News.objects.all().order_by('-id')
-  paginator = Paginator(news_list, 3)
-  page = request.GET.get('page')
-  news_list = paginator.get_page(page)
   booked = False
   if request.method == "POST":
     bookingform = BookingForm(request.POST)
@@ -27,16 +23,9 @@ def home(request):
     'Abouts':About.objects.all(),
     'Services':Service.objects.all(),
     'Testimonies':Testimony.objects.all(),
-    'news':news_list
+    # 'news':news_list
   }
   return render(request,'pages/index.html',context)
-
-def pagn(request):
-  news_list = News.objects.all()
-  paginator = Paginator(news_list, 3)
-  page_number = request.GET.get('page')
-  page_obj = paginator.get_page(page_number)
-  return render(request,'pages/index.html',{'page_obj':page_obj})
 
 class ServiceDetail(DetailView):
   model = Service
